@@ -55,7 +55,7 @@ if __name__ == '__main__':
                             | |  | |/ ___ \ |___  | |_| |  __/ | | |  __/ | | (_| | || (_) | |   
                             |_|  |_/_/   \_\____|  \____|\___|_| |_|\___|_|  \__,_|\__\___/|_|  
                             
-                                            Coded by: oppaje For NeThinGoez.com
+                                                    Coded by: oppaje
 
                                       """)
     mode = input("""Select Mode:
