@@ -41,7 +41,6 @@ def generator():
       elif mode == '2':
         o.write(mode2())
       print(f"Generated: {x + 1} MAC addresses", end='\r')
-  o.close()
   print("\nRemoving duplicates...", end='\r')
   duplicate(file)
 
@@ -55,8 +54,7 @@ if __name__ == '__main__':
                             | |  | |/ ___ \ |___  | |_| |  __/ | | |  __/ | | (_| | || (_) | |   
                             |_|  |_/_/   \_\____|  \____|\___|_| |_|\___|_|  \__,_|\__\___/|_|  
                             
-                                                    Coded by: oppaje
-
+                                            Coded by: oppaje For NeThinGoez.com
                                       """)
     mode = input("""Select Mode:
     1. Default: 00:1A:79:**:**:**
