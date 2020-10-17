@@ -21,17 +21,16 @@ def mode1():
   return f"00:1A:79:{mac[0:2]}:{mac[2:4]}:{mac[4:6]}\n"
 
 
-def mode2():
+def mode2(custom):
   list1 = []
-  letters = [char for char in custom]
-  for letter in letters:
+  for letter in custom:
     if letter == '*':
       letter = letter.replace('*', ''.join(choice(string)))
     list1.append(letter)
   return ''.join(list1) + "\n"
 
 
-def generator():
+def generator(mode, custom):
   file = 'MacAddresses.txt'
 
   with open(file, 'w') as o:
@@ -39,7 +38,7 @@ def generator():
       if mode == '1':
         o.write(mode1())
       elif mode == '2':
-        o.write(mode2())
+        o.write(mode2(custom))
       print(f"Generated: {x + 1} MAC addresses", end='\r')
   print("\nRemoving duplicates...", end='\r')
   duplicate(file)
@@ -62,8 +61,10 @@ if __name__ == '__main__':
     > """)
     if mode == '2':
       custom = input("Enter custom mode: ")
+    else:
+      custom = None
     number = int(input("Enter the amount of Macs to generate: "))
-    generator()
+    generator(mode, custom)
   except:
     print(traceback.format_exc())
     print('Something went wrong, please try again. If the same error keeps happening contact oppaje.')
