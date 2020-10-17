@@ -3,6 +3,7 @@ import traceback
 
 
 string = '0123456789ABCDEF'
+file = 'MacAddresses.txt'
 
 def duplicate(path):
   f = open(path, 'r', errors='ignnore').readlines()
@@ -31,8 +32,6 @@ def mode2(custom):
 
 
 def generator(mode, custom):
-  file = 'Fucked.txt'
-
   with open(file, 'w') as o:
     for x in range(number):
       if mode == '1':
