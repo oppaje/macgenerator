@@ -13,7 +13,7 @@ def duplicate(path):
   for line in new_f:
     o.write(line)
   print(f"{old - new} duplicate(s) have been removed!")
-  print("\nFinished! Results have been saved in MacAddresses.txt")
+  print(f"\nFinished! Results have been saved in {path}")
 
 
 def mode1():
