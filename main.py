@@ -31,7 +31,7 @@ def mode2(custom):
 
 
 def generator(mode, custom):
-  file = 'MacAddresses.txt'
+  file = 'Fucked.txt'
 
   with open(file, 'w') as o:
     for x in range(number):
@@ -59,10 +59,7 @@ if __name__ == '__main__':
     1. Default: 00:1A:79:**:**:**
     2. Custom (Example: 00:1A:79:*8:1B:**)
     > """)
-    if mode == '2':
-      custom = input("Enter custom mode: ")
-    else:
-      custom = None
+    custom = input("Enter custom mode: ") if mode == '2' else None
     number = int(input("Enter the amount of Macs to generate: "))
     generator(mode, custom)
   except:
